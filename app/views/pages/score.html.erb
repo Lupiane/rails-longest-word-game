@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Your Score</h2>
+  <div class="summary">
+    <p>Your word: <%= @attempt %> </p>
+    <p>Time taken to answer: <%= @time_taken %>s</p>
+    <p>Translation: <%= @translation %></p>
+    <p>
+      <ul class="list-inline">
+        <li> Score: <%= @message[0] %></li>
+        <li> <%= @message[1] %></li>
+      </ul>
+    </p>
+  </div>
+  <div class="link">
+    <%= link_to "Better your score?", game_path %>
+  </div>
+</div>

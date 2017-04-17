@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Play the Game</h2>
+  <p> Here are your letters: </p>
+  <h3><% @grid.each do |letter| %>
+    <%= letter %>
+    <% end %>
+  </h3>
+  <form action="/score">
+    <label for="question">What's your best shot?</label>
+    <input type="hidden" name="start_time" value=" <%= Time.now.to_i %> ">
+    <input type="text" id="question" name="attempt" placeholder="WORD">
+    <input type="submit" value="Go on!" class="btn btn-danger">
+    <input type="hidden" name="grid" value="<%= @grid.join(' ')%>">
+  </form>
+</div>
